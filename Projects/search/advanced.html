@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <style>
+            @font-face {
+                font-family: 'Product-Sans-Regular';
+                src: url('Product Sans Regular.ttf') format('truetype');
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                height: 90vh;
+                font-family: 'Product-Sans-Regular';
+                margin: 20;
+                padding: 0;
+            }
+            header {
+                padding: 25px 40px 
+            }
+            form div{
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+            nav {
+                width: 98%;
+                display: flex;
+                justify-content: flex-end;
+                padding: 10px 10px;
+            }
+            nav a {
+                align-items: right;
+                text-decoration: none;
+                color: black;
+            }
+            nav a:hover {
+                text-decoration: underline;
+            }
+            hr {
+                width: 100%;
+                border: 1px solid #ccc;
+                margin-bottom: 30px;
+            }   
+            form input[type="text"] {
+                width: 700px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 2px;
+            }
+            form label {
+                color: rgb(84, 84, 84);
+                width: 200px; 
+                margin-right: 10px;
+                margin-left: 40px;
+                text-align: left;
+            }
+            #submitcontainer {
+                display: flex;
+                margin-left: 822px;
+            }
+            #submitbutton {
+                
+                padding: 8px 18px;
+                background-color: #004af7;
+                color: white;
+                border: none;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav>
+            <a href="images.html">Images</a>
+            <a style="width:5%; margin-right: -43px; margin-left: 30px; " href="index.html"><img style="width: 25%;" src="google logo.png" alt="Google"></a>
+        </nav>
+        <header style="color:rgb(189, 63, 63); font-size: 20px;">Advanced Search</header>
+        <hr>
+        <header style="color:rgb(84, 84, 84);">Find pages with...</header>
+        <form action="https://www.google.com/search" method="get">
+            <!-- All these words -->
+            <div>
+                <label for="as_q">all these words:</label>
+                <input id="as_q" type="text" name="as_q" >
+            </div>
+            <!-- This exact word or phrase -->
+            <div>
+                <label for="as_epq">this exact word or phrase:</label>
+                <input id="as_epq" type="text" name="as_epq" >
+            </div>
+            <!-- Any of these words -->
+            <div>
+                <label for="as_oq">any of these words:</label>
+                <input id="as_oq" type="text" name="as_oq" >
+            </div>
+            <!-- None of these words -->
+            <div>
+                <label for="as_eq">none of these words:</label>
+                <input id="as_eq" type="text" name="as_eq" >
+            </div>
+            <!-- Submit Button -->
+            <div id="submitcontainer">
+                <input id="submitbutton" type="submit" value="Advanced Search">
+            </div>
+        </form>
+    </body>
+</html>
